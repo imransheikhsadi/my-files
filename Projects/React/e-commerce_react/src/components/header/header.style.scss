@@ -5,19 +5,21 @@
     justify-content: space-between;
 
     .logo-container{
-        width: 40%;
+        width: max-content;
     }
 
     .options{
-        width: 30%;
         display: flex;
-        justify-content: space-around;
+        justify-content: end;
+        align-items: center;
+
 
         .option{
             list-style: none;
             text-decoration: none;
             color: black;
             cursor: pointer;
+            padding: 0 30px;
         }
     }
 }
