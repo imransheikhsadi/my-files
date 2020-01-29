@@ -1,0 +1,1 @@
+tracker-extract:amd64=2.3.0-1 apturl-common:amd64=0.5.2ubuntu17 libgsf-1-114:amd64=1.14.46-1 libtracker-miner-2.0-0:amd64=2.3.0-1 apturl:amd64=0.5.2ubuntu17 libgif7:amd64=5.1.4-3ubuntu1 libgsf-1-common:amd64=1.14.46-1 tracker:amd64=2.3.0-1 libtracker-control-2.0-0:amd64=2.3.0-1 nautilus-data:amd64=1:3.34.1-1ubuntu1 libcue2:amd64=2.2.1-2
