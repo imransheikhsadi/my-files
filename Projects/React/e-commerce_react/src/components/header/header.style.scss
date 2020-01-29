@@ -1,0 +1,23 @@
+.header{
+    padding: 30px 10px 25px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-container{
+        width: 40%;
+    }
+
+    .options{
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+
+        .option{
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+    }
+}
