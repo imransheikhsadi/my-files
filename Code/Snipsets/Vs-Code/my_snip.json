@@ -1,0 +1,68 @@
+{
+	// Place your snippets for javascriptreact here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"classConstructor": {
+		"prefix": "rconst",
+		"body": [
+		  "constructor(props) {",
+		  "\tsuper(props)",
+		  "",
+		  "\tthis.state = {",
+		  "\t\t $0",
+		  "\t}",
+		  "}",
+		  ""
+		],
+		"description": "Adds a default constructor for it('', () => {})the class that contains props as arguments"
+	  },
+	"reactClassExportComponent": {
+		"prefix": "rce",
+		"body": [
+		  "import React, { Component } from 'react'",
+		  "import '${1:${TM_FILENAME_BASE/\\.component//}}.style.scss'",
+		  "",
+		  "export class ${2:${TM_FILENAME_BASE/\\.component//}} extends Component {",
+		  "\trender() {",
+		  "\t\treturn (",
+		  "\t\t\t<div>",
+		  "\t\t\t\t$0",
+		  "\t\t\t</div>",
+		  "\t\t)",
+		  "\t}",
+		  "}",
+		  "",
+		  "export default ${2:${TM_FILENAME_BASE/\\.component//}}",
+		  ""
+		],
+		"description": "Creates a React component class with ES7 module system"
+	  },
+	  "reactArrowFunctionComponent": {
+		"prefix": "rfc",
+		"body": [
+		  "import React from 'react'",
+		  "import '${1:${TM_FILENAME_BASE/\\.component//}}.style.scss'",
+		  "",
+		  "const ${1:${TM_FILENAME_BASE/\\.component//}} = () => {",
+		  "\treturn (",
+		  "\t\t<div>",
+		  "\t\t\t$0",
+		  "\t\t</div>",
+		  "\t)",
+		  "}",
+		  "export default ${2:${TM_FILENAME_BASE/\\.component//}}",
+		  ""
+		],
+		"description": "Creates a React Arrow Function Component with ES7 module system"
+	  },
+}
