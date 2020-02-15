@@ -1,13 +1,31 @@
-@keyframes leftRight {
-    0%{
-        transform: rotateX(0deg);
+.elastic_rotate-container{
+
+    
+    & span:not(:first-child){
+        visibility: hidden;
     }
-    100%{
-        transform: rotateX(360deg);
+
+    span {
+        position: absolute;
+        display: inline-block;
+        font-size: inherit;
+        transform-origin: 50% 100%;
     }
+
 }
 
-@keyframes text_animation-out{
+
+// Elastic Rotate
+.e-r_in{
+    animation: e-r_in 1.2s linear;
+    visibility: visible !important;
+}
+.e-r_out{
+    animation: e-r_out 1.2s linear;
+    visibility: hidden;
+}
+
+@keyframes e-r_out{
     0% {
         transform: perspective(300px) rotateX(0deg);
         visibility: visible;
@@ -29,7 +47,7 @@
     }
 }
 
-@keyframes text_animation-in{
+@keyframes e-r_in{
     0% {
         transform: perspective(300px) rotateX(0deg);
         opacity: 0;
@@ -46,29 +64,3 @@
     }
 }
 
-
-
-.elastic_rotate-container{
-
-    
-& span:not(:first-child){
-    visibility: hidden;
-}
-
-span {
-    position: absolute;
-    display: inline-block;
-    font-size: inherit;
-}
-
-.text_animate-in {
-    animation: text_animation-in 1.2s linear;
-    transform-origin: 50% 100%;
-    visibility: visible !important;
-}
-.text_animate-out {
-    animation: text_animation-out 1.2s linear;
-    transform-origin: 50% 100%;
-    visibility: hidden;
-}
-}

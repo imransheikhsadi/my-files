@@ -1,6 +1,7 @@
+
 class Rotate {
-    constructor(element, rotator) {
-      this.rotatorType(rotator)(element);
+    constructor(element, rotator,time) {
+      this.rotatorType(rotator)(element,time);
     }
 
 
@@ -15,16 +16,16 @@ class Rotate {
           return this.elastic;
   
         default:
-          break;
+          console.log('No Rotator matched')
       }
     };
   
   
   
     //Elastric Rotate -----------------------------------------
-    elastic = (element) => {
+    elastic = (element,time) => {
       this.addClass(element,'elastic_rotate-container');
-      this.itarator(element,'text_animate-in','text_animate-out')
+      this.itarator(element,'e-r',time)
     };
 
     //Up Fade Rotate -------------------------------------------
@@ -46,7 +47,7 @@ class Rotate {
 
     //Itarator ---------------------------------------------
 
-    itarator = (element,animate_in,animate_out) => {
+    itarator = (element,animation_name,time) => {
       let i = 0;
   
       let idList = [];
@@ -57,25 +58,30 @@ class Rotate {
         }
       });
       const animate = () => {
-  
+        
         if (i === idList.length) {
           i = 0;
         }
-        let animation_out = idList[i];
-        let animation_in = i === idList.length - 1 ? idList[0] : idList[i + 1];
-  
-        document.getElementById(`${animation_out}`).className = "";
-        document.getElementById(`${animation_in}`).className = "";
+        let current_text = idList[i];
+        let next_text = i === idList.length - 1 ? idList[0] : idList[i + 1];
+        
+        document.getElementById(current_text).className = "";
+        document.getElementById(next_text).className = "";
+        
+        
         document
-          .getElementById(`${animation_out}`)
-          .classList.add(`${animate_out}`);
+        .getElementById(current_text)
+        .classList.add(`${animation_name}_out`);
+        
+        
         document
-          .getElementById(`${animation_in}`)
-          .classList.add(`${animate_in}`);
-  
+        .getElementById(next_text)
+        .classList.add(`${animation_name}_in`);
+        
+        
         i++;
       };
-      setInterval(animate, 3000);
+      setInterval(animate, time);
     }
 
     //Utility Methods --------------------------------------
