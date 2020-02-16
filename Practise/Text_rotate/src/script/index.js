@@ -5,6 +5,7 @@ import Rotate from '../module/text_rotate';
 
 
 // new Rotate("rotate", "elastic_rotate");
-new Rotate("rotate", "UP_FADE",3000);
-// new Rotate("potate", "ELASTIC");
+new Rotate("rotate", "FADE_OUT",3000);
+new Rotate("text", "ELASTIC",2000);
+new Rotate("hg", "UP_FADE",2000);
 

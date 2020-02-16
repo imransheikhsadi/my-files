@@ -94,7 +94,7 @@
         transform-origin: 50% 0;
     }
     55%{
-        top: 30px;
+        top: 20px;
     }
     70%{
         // opacity: 1;
@@ -128,6 +128,47 @@
     50%{
         opacity: 0;
         transform: perspective(600px) rotateX(360deg);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+//Fade Out Rotate
+.f-u_in{
+    visibility: visible !important;
+    animation: f-u_in 1.2s linear;
+    transform-origin: 50% 10%;
+}
+.f-u_out{
+    visibility: hidden;
+    animation: f-u_out 1.2s linear;
+    transform-origin: 50% 0;
+}
+
+@keyframes f-u_in{
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes f-u_out{
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    40%{
+        opacity: 0;
     }
 
     100% {

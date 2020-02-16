@@ -14,6 +14,9 @@ class Rotate {
   
         case "ELASTIC":
           return this.elastic;
+        
+        case "FADE_OUT":
+          return this.fade_out;
   
         default:
           console.log('No Rotator matched')
@@ -32,6 +35,12 @@ class Rotate {
     up_fade = (element,time) => {
       this.addClass(element,'elastic_rotate-container');
       this.itarator(element,'u-f',time)
+    }
+    
+    //Fade Out Rotate -------------------------------------------
+    fade_out = (element,time) => {
+      this.addClass(element,'elastic_rotate-container');
+      this.itarator(element,'f-u',time)
     }
 
     //Itarator ---------------------------------------------
