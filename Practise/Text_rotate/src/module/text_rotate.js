@@ -29,21 +29,10 @@ class Rotate {
     };
 
     //Up Fade Rotate -------------------------------------------
-    up_fade = () => {
-
+    up_fade = (element,time) => {
+      this.addClass(element,'elastic_rotate-container');
+      this.itarator(element,'u-f',time)
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     //Itarator ---------------------------------------------
 
