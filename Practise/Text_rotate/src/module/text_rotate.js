@@ -17,6 +17,8 @@ class Rotate {
         
         case "FADE_OUT":
           return this.fade_out;
+        case "COLLISION":
+          return this.collision;
   
         default:
           console.log('No Rotator matched')
@@ -41,6 +43,11 @@ class Rotate {
     fade_out = (element,time) => {
       this.addClass(element,'elastic_rotate-container');
       this.itarator(element,'f-u',time)
+    }
+    //Collision Rotate
+    collision = (element,time) => {
+      this.addClass(element,'elastic_rotate-container');
+      this.itarator(element,'c-r',time)
     }
 
     //Itarator ---------------------------------------------

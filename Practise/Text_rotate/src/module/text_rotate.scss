@@ -1,5 +1,6 @@
 .elastic_rotate-container{
     position: relative;
+   
     
     & span:not(:first-child){
         visibility: hidden;
@@ -7,7 +8,6 @@
 
     span {
         position: absolute;
-        display: inline-block;
         font-size: inherit;
     }
 
@@ -139,12 +139,12 @@
 .f-u_in{
     visibility: visible !important;
     animation: f-u_in 1.2s linear;
-    transform-origin: 50% 10%;
+    // transform-origin: 50% 10%;
 }
 .f-u_out{
     visibility: hidden;
     animation: f-u_out 1.2s linear;
-    transform-origin: 50% 0;
+    // transform-origin: 50% 0;
 }
 
 @keyframes f-u_in{
@@ -173,5 +173,58 @@
 
     100% {
         opacity: 0;
+    }
+}
+
+//Collision Rotate
+.c-r_in{
+    visibility: visible !important;
+    animation: c-r_in 1.2s linear;
+    // transform-origin: 50% 10%;
+}
+.c-r_out{
+    visibility: hidden;
+    animation: c-r_out 1.2s linear;
+    // transform-origin: 50% 0;
+}
+
+@keyframes c-r_in{
+    0% {
+        visibility: visible;
+        left: 100px;
+    }
+
+    20%{
+        left: 30px;
+    }
+
+    40%{
+        left: 90px;
+    }
+    
+    100% {
+        left: 0;
+    }
+}
+@keyframes c-r_out{
+    0% {
+        visibility: visible;
+        opacity: 1;
+        transform: perspective(500px) rotateY(0deg);
+    }
+
+    19%{
+        transform: perspective(500px) rotateY(0deg);
+        transform-origin: center left;
+    }
+    20%{
+        transform: rotateY(-30deg);
+        transform-origin: center left;
+    }
+
+    100% {
+        transform: rotateY(-30deg);
+
+        opacity: 1;
     }
 }

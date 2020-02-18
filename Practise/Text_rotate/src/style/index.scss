@@ -1,12 +1,13 @@
 ///test perpose
-.my_text{
-    font-size: 3rem;
-    padding: 2rem;
-    position: relative;
-    // padding-top: 400px;
-    color: blueviolet;
+.text_container{
+    font-size: 2rem;
+    margin: 3rem;
 
-    .rotate{
-        color: brown;
-    }
+    
+}
+
+.text{
+    transform: perspective(300px) rotateY(-60deg);
+    transform-origin: 0 50%;
+
 }
