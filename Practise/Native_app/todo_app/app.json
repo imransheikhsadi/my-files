@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Blank Template",
-    "slug": "todo_app",
+    "slug": "rn-first-app",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
