@@ -11,6 +11,12 @@
 
     .row {
       .item {
+        @media (max-width:768px) {
+          &:not(:first-child){
+            padding-top: 2.5rem;
+          }
+      }
+      
         .col_container {
           position: relative;
 
@@ -49,6 +55,7 @@
             opacity: 0;
             visibility: hidden;
             transition: opacity 300ms;
+            
 
             .name {
               font-size: 2rem;

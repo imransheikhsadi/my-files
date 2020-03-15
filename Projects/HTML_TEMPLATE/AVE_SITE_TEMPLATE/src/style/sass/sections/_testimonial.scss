@@ -19,6 +19,12 @@
 
       .glider_wraper {
         width: 50%;
+        @media (max-width:500px) {
+          width: 100%;
+        }
+        @media (max-width:600px) {
+          width: 80%;
+        }
         margin: 0 auto;
         cursor: grab;
 
@@ -90,6 +96,11 @@
 
       .statics_item {
           text-align: center;
+        
+            @media (max-width:768px) {
+                padding-top: 2.5rem;
+               
+          }
         h4 {
             font-size: 7rem;
         }

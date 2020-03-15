@@ -7,6 +7,9 @@
 
         &_content{
             flex: 1;
+            @media (max-width:574px) {
+                padding-top: 3rem;
+            }
             
             
             .wraper{
