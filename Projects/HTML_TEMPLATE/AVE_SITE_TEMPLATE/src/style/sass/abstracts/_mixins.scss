@@ -1,0 +1,34 @@
+//SVG normal state
+
+@mixin svg($class,$fill:none,$stroke:black,$stroke_width:10) {
+    #{$class}{
+        fill: $fill;
+        stroke: $stroke;
+        stroke-width: $stroke_width;
+    }
+}
+
+//SVG animation mixin
+
+@mixin hover_animate ($name,$class,$line_width,$animation_fill_mode:false) {
+    .icon_container:hover .#{$name}{
+        stroke: #fff;
+        stroke-width: 10;
+        stroke-dasharray: $line_width;
+        stroke-dashoffset: $line_width;
+        animation: #{$name}_animation 2s linear;
+        @if $animation_fill_mode {
+            animation-fill-mode: forwards;
+        }
+     }
+     
+     @keyframes #{$name}_animation{
+        0%{
+            stroke-dashoffset: $line_width;
+        }
+        100%{
+            stroke-dashoffset: 0;
+        }
+     }
+     
+}

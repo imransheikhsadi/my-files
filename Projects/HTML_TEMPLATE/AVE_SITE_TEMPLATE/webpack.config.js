@@ -1,19 +1,20 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const postcssPresetEnv = require('postcss-preset-env');
+const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
 module.exports = {
-
-  entry: './src/script/index.js',
+  entry: "./src/script/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
   // exclude: /(node_modules|bower_components)/,
-  mode: 'development',
+  mode: "development",
   devServer: {
     port: 5555,
-    open: true,
+    open: true
     // writeToDisk: true
   },
 
@@ -25,67 +26,65 @@ module.exports = {
       {
         test: /\.m?js$/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-proposal-class-properties"]
           }
         }
       },
 
       {
-        test: /\.(png|jpeg|gif|jpg|svg)$/i,
-        loader: 'file-loader',
+        test: /\.(png|ttf|woff(2)?|eot|jpeg|gif|jpg|svg)$/i,
+        loader: "file-loader",
         options: {
-          name: './img/[name].[ext]',
-        },
+          name: `[path][name].[ext]`,
+          context: path.resolve(__dirname, "src/")
+        }
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: (resourcePath, context) => {
-                // publicPath is the relative path of the resource to the context
-                // e.g. for ./css/admin/main.css the publicPath will be ../../
-                // while for ./css/main.css the publicPath will be ../
-                return path.relative(path.dirname(resourcePath), context) + '/';
-              },
-              // by default it uses publicPath in webpackOptions.output
-
-              hmr: process.env.NODE_ENV === 'development',
-
-            },
+            loader: MiniCssExtractPlugin.loader
           },
-          //'css-loader?url=false',
-          'css-loader',
-          'sass-loader'
-        ],
+          // 'css-loader?url=false',
+          {
+            loader:"css-loader",
+          },
+          { loader: 'postcss-loader', options: {
+            ident: 'postcss',
+            plugins: (loader) => [
+              postcssPresetEnv({
+                autoprefixer: { grid: true }
+              }),
+              new IconfontWebpackPlugin(loader)
+            ]
+          } },
+          "sass-loader"
+        ]
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader',
-          options: {
-            minimize: false,
-            removeComments: false,
-            collapseWhitespace: false
-          }
-        }],
-      },
+        loader: "html-loader",
+        options: {
+          root: "./src/index.html",
+          interpolate: true
+          // minimize: true,
+        }
+      }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: './css/style.css',
-      chunkFilename: '[id].css',
-      ignoreOrder: false, // Enable to remove warnings about conflicting order
+      filename: "style.css",
+      chunkFilename: "[id].css",
+      ignoreOrder: false // Enable to remove warnings about conflicting order
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.html"
     })
-  ],
-
-}
+  ]
+};

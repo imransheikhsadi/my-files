@@ -1,0 +1,21 @@
+.btn-lg {
+  width: 12rem;
+  height: 4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 300ms;
+  font-weight: 600 !important;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+.btn-gradient {
+  background-color: red;
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

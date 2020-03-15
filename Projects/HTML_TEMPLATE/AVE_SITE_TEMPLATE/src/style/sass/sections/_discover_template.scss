@@ -1,0 +1,49 @@
+.discover_template{
+    margin: 12rem 0;
+
+    .container{
+        display: flex;
+        column-gap: 8rem;
+
+        &_content{
+            flex: 1;
+            
+            
+            .wraper{
+                width: 80%;
+                margin-left: auto;
+
+                h2{
+                    font-weight: 600;
+                    margin: 2rem 0;
+
+                }
+                p{
+                    font-size: 1.6rem;
+                    margin: 3rem 0;
+                }
+            }
+        }
+        &_image{
+            flex: 1;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 100%;
+                height: 100%;
+                background-color: #ffe53b;
+                background-image: linear-gradient(315deg, #ffe53b 0%, #ff2525 74%);
+                z-index: -1;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+            
+        }
+    }
+}

@@ -3,3 +3,24 @@ h1{
 	color: red;
 	text-align: center;
 }
+.social-icon{
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(118deg) brightness(80%) contrast(104%);
+	width: 12px;
+	height: 16px;
+	
+	&:hover{
+		filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(118deg) brightness(104%) contrast(104%);
+	}
+}
+.social-icon_big{
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(118deg) brightness(104%) contrast(104%);
+	width: 40px;
+}
+
+.header_hero_wraper{
+	background-image: url(../../img/bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}

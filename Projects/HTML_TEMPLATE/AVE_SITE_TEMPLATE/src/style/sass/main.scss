@@ -1,13 +1,16 @@
 @import "abstracts/variables";
-@import "abstracts/functions";
 @import "abstracts/mixins";
-@import "abstracts/variables";
+@import "abstracts/functions";
 
 
-@import "base/animations";
+
+
 @import "base/base";
 @import "base/typography";
 @import "base/reset";
+@import "base/utils";
+@import "base/animations";
+@import "base/icon_font";
 
 @import "components/buttons";
 @import "components/forms";
@@ -24,5 +27,25 @@
 @import "pages/home";
 @import "pages/contact";
 
+@import "sections/hero_section";
+@import "sections/feature_section";
+@import "sections/extra_feature_section";
+@import "sections/featured_works";
+@import "sections/discover_template";
+@import "sections/advantage_section";
+@import "sections/team_section";
+@import "sections/testimonial";
+@import "sections/post";
+@import "sections/advertise";
+
+
+//Vendors
+//Rotate Animation
+@import "../../vendors/css/text_rotate";
+
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// Optional Theme Stylesheet
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 

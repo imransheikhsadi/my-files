@@ -1,0 +1,55 @@
+//Web Tab SVG animation
+@include svg(".web_tab_line");
+@include hover_animate("web_tab_line","#web_tab",452,true);
+
+@include svg(".web_tab_polyline");
+@include hover_animate("web_tab_polyline","#web_tab",803,true);
+
+@include svg(".web_tab_path");
+@include hover_animate("web_tab_path","#web_tab",1434,true);
+
+#web_tab:hover .web_tab_rect{
+   animation: rect 2s linear;
+   animation-fill-mode: forwards;
+}
+
+@keyframes rect{
+   0%{
+       fill-opacity: 0;
+   }
+   100%{
+       fill-opacity: 1;
+   }
+}
+
+//Bag svg animation
+@include svg(".bag_line_one");
+@include hover_animate("bag_line_one","#bag_icon",132,true);
+@include svg(".bag_line_two");
+@include hover_animate("bag_line_two","#bag_icon",132,true);
+
+
+@include svg(".bag_path_one");
+@include hover_animate("bag_path_one","#bag_icon",1224.76,true);
+@include svg(".bag_path_two");
+@include hover_animate("bag_path_two","#bag_icon",314.228,true);
+
+//Tool svg animation
+@include svg(".tool_path_2");
+@include hover_animate("tool_path_2","#tool_icon",499.44,true);
+
+@include svg(".tool_path_3");
+@include hover_animate("tool_path_3","#tool_icon",187.39,true);
+
+@include svg(".tool_path_4");
+@include hover_animate("tool_path_4","#tool_icon",239.19,true);
+
+@include svg(".tool_path_5");
+@include hover_animate("tool_path_5","#tool_icon",1215.3,true);
+
+//chat svg animation
+@include svg(".chat_polyline");
+@include hover_animate("chat_polyline","#chat_icon",180.652,true);
+
+@include svg(".chat_polygon");
+@include hover_animate("chat_polygon","#chat_icon",1774.719,true);

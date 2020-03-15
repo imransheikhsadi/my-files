@@ -1,0 +1,44 @@
+.hero_section {
+
+  .hero_background {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .container {
+    height: 100%;
+  }
+
+  .hero_heading_container{
+    margin-top: 8rem;
+
+    .hero_heading_mini{
+      margin-bottom: 3rem;
+      .text{
+        font-size: 1.8rem;
+        padding-left: 15px;
+      }
+      img{
+        margin-top: -5px;
+      }
+    }
+    .hero_heading{
+      font-size: 70px;
+      color: #fff;
+      display: flex;
+      // column-gap: 6px;
+      row-gap: -3px;
+      flex-direction: column;
+      @media (max-width: 510px) {
+      font-size: 65px;
+      }
+      @media (max-width: 450px) {
+        font-size: 50px;
+        }
+    }
+    h4{
+      margin-top: 4rem;
+    }
+  }
+}

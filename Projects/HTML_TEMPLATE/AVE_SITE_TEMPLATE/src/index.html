@@ -13,123 +13,440 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header container-fluid">
-        <div class="d-flex justify-content-between">
-            <div class="">Avata LOGO</div>
-            <div class="">
-                <ul class="d-flex justify-content-center list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Elements</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Header</a></li>
-                </ul>
-            </div>
-            <div class="">Hello</div>
+    <div class="header_hero_wraper">
+      <header class="header container-fluid">
+        <div class="header_container">
+          <div class="header_logo_container">
+            <img src="${require(`./img/logo/logo-light.svg`).default}" alt="" />
+          </div>
+          <nav class="nav_container">
+            <ul class="d-flex justify-content-center list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Templates</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Elements</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Header</a></li>
+            </ul>
+          </nav>
+          <div class="header_social-icons ">
+            <ul class="list-unstyled d-inline-flex">
+              <li class="mx-3">
+                <a href="#"
+                  ><img
+                    class="social-icon"
+                    src="${require(`./img/social-icon/facebook-f-brands.svg`).default}"
+                    alt=""
+                /></a>
+              </li>
+              <li class="mx-3">
+                <a href="#"
+                  ><img
+                    class="social-icon"
+                    src="${require(`./img/social-icon/twitter-brands.svg`).default}"
+                    alt=""
+                /></a>
+              </li>
+              <li class="mx-3">
+                <a href="#"
+                  ><img
+                    class="social-icon"
+                    src="${require(`./img/social-icon/telegram-brands.svg`).default}"
+                    alt="Telegram Icon"
+                /></a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
-    <main class="main_content">
+      </header>
       <section class="hero_section">
-        <div class="container">
+        <div class="container mt-5">
           <div class="hero_heading_container">
-            <span>The best collection ever built.</span>
-            <h2>
-              Next-generation
-              <span class="hero_text_animation">
+            <div class="hero_heading_mini">
+              <img
+                class="social-icon_big"
+                src="${require(`./img/social-icon/youtube-brands.svg`).default}"
+                alt="Youtube Icon"
+              />
+              <span class="text white-opacity"
+                >The best collection ever built.</span
+              >
+            </div>
+            <div class="hero_heading">
+              <span>Next generation</span>
+              <div class="hero_text_animation">
                 <span id="1">online shop</span>
                 <span id="2">personal blog</span>
                 <span id="3">magazine</span>
-                <span id="4">site builder</span>
-              </span>
-            </h2>
-            <span>Make a website you’ll be proud of. </span>
+                <span id="4">site builde</span>
+              </div>
+            </div>
+            <h4 class="f-s-22 white-opacity">
+              Make a website you’ll be proud of.
+            </h4>
           </div>
           <div class="hero_video"></div>
         </div>
       </section>
+    </div>
+    <main class="main_content">
       <section class="feature_section">
         <div class="container">
           <div class="feature_item">
-            <div class="icon_container"></div>
-            <h3 class="header">Huge Collection</h3>
+            <div class="icon_container">
+              <svg
+                id="web_tab"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 540 540"
+                style="enable-background:new 0 0 540 540;"
+                xml:space="preserve"
+              >
+                <polyline
+                  class="web_tab_polyline"
+                  points="486.5,401 514.5,401 514.5,104 62.5,104 62.5,130 "
+                />
+                <path class="web_tab_path" d="M469.5,147v281h-436V147H469.5" />
+                <line
+                  class="web_tab_line"
+                  x1="25.5"
+                  y1="188"
+                  x2="477.5"
+                  y2="188"
+                />
+                <rect
+                  class="web_tab_rect web_tab_rect-one"
+                  x="51.5"
+                  y="159"
+                  width="30"
+                  height="13"
+                />
+                <rect
+                  class="web_tab_rect web_tab_rect-two"
+                  x="94.5"
+                  y="159"
+                  width="30"
+                  height="13"
+                />
+                <rect
+                  class="web_tab_rect web_tab_rect-three"
+                  x="137.5"
+                  y="159"
+                  width="30"
+                  height="13"
+                />
+              </svg>
+            </div>
+            <h3 class="heading">Huge Collection</h3>
             <p class="text">
               Open a beautiful store, increase your conversion rates and boost
               your sales
             </p>
           </div>
           <div class="feature_item">
-            <div class="icon_container"></div>
-            <h3 class="header">Huge Collection</h3>
+            <div class="icon_container">
+              <svg
+                version="1.1"
+                id="bag_icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 540 540"
+                style="enable-background:new 0 0 540 540;"
+                xml:space="preserve"
+              >
+                <path
+                  class="bag_path_one"
+                  d="M417.5,155.53v317.38h-295V155.53H417.5"
+                />
+
+                <path
+                  class="bag_path_two"
+                  d="M193.5,139c0-66.83,34.25-121,76.5-121s76.5,54.17,76.5,121"
+                />
+
+                <line
+                  class="bag_line_one"
+                  x1="336"
+                  y1="314.22"
+                  x2="204"
+                  y2="314.22"
+                />
+                <line
+                  class="bag_line_two"
+                  x1="270"
+                  y1="248.22"
+                  x2="270"
+                  y2="380.22"
+                />
+              </svg>
+            </div>
+            <h3 class="heading">Next-Gen Online Store</h3>
             <p class="text">
               Open a beautiful store, increase your conversion rates and boost
-              your sales
+              your sales.
             </p>
           </div>
           <div class="feature_item">
-            <div class="icon_container"></div>
-            <h3 class="header">Huge Collection</h3>
+            <div class="icon_container">
+              <svg
+                version="1.1"
+                id="tool_icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 540 540"
+                style="enable-background:new 0 0 540 540;"
+                xml:space="preserve"
+              >
+                <style type="text/css"></style>
+
+                <path
+                  class="tool_path_2"
+                  d="M477.57,431.88l-39.37,39.37L300.98,334.05l39.37-39.37L477.57,431.88z"
+                />
+                <path
+                  class="tool_path_3"
+                  d="M283.84,277.38l38.8,38.95 M148.94,141.96l93.45,93.81"
+                />
+                <path
+                  class="tool_path_4"
+                  d="M85.99,98.38l18.7-18.7l65.14,47.02l-36.82,36.82L85.99,98.38z"
+                />
+                <path
+                  class="tool_path_5"
+                  d="M434.09,164.5c15.03-15.03,16.86-54.29,16.86-54.29l-50.84,26.08l-16.02-15.92l25.39-51.63
+               c0,0-39.26,1.83-54.29,16.86c-15.01,15.01-20.7,35.65-16.86,54.23l-251.6,251.6l-24.3,46.85l18.98,18.98l46.85-24.3l251.6-251.6
+               C398.45,185.2,419.08,179.51,434.09,164.5z"
+                />
+              </svg>
+            </div>
+            <h3 class="heading">AI-Powered Support</h3>
             <p class="text">
-              Open a beautiful store, increase your conversion rates and boost
-              your sales
+              Support, makes your experience faster and more accurate than ever.
             </p>
           </div>
           <div class="feature_item">
-            <div class="icon_container"></div>
-            <h3 class="header">Huge Collection</h3>
+            <div class="icon_container">
+              <svg
+                version="1.1"
+                id="chat_icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 540 540"
+                style="enable-background:new 0 0 540 540;"
+                xml:space="preserve"
+              >
+                <polygon
+                  class="chat_polygon"
+                  points="527.5,388.5 210.82,388.5 101.5,470.5 98.84,388.5 12.5,388.5 12.5,69.5 527.5,69.5 "
+                />
+                <polyline
+                  class="chat_polyline"
+                  points="202.5,210 247.5,248 337.5,166 "
+                />
+              </svg>
+            </div>
+            <h3 class="heading">Smart Installation Tools</h3>
             <p class="text">
-              Open a beautiful store, increase your conversion rates and boost
-              your sales
+              Tools are beyond the one-click install, async tech merges with
+              ultimate flexibility.
             </p>
           </div>
         </div>
       </section>
       <section class="extra-feature_section">
         <div class="container">
-          <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
+          <div class="glider_container">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <h4>Buy Ave And get exclusive plugin free</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Totam enim facilis iste veniam cumque ex dolore odio
+                      distinctio quas beatae! Reiciendis incidunt quisquam
+                      magnam quaerat cupiditate veniam, inventore accusamus
+                      eveniet.
+                    </p>
+                  </li>
+                  <li class="glide__slide">
+                    <h4>Buy Ave And get exclusive plugin free</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Totam enim facilis iste veniam cumque ex dolore odio
+                      distinctio quas beatae! Reiciendis incidunt quisquam
+                      magnam quaerat cupiditate veniam, inventore accusamus
+                      eveniet.
+                    </p>
+                  </li>
+                  <li class="glide__slide">
+                    <h4>Buy Ave And get exclusive plugin free</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Totam enim facilis iste veniam cumque ex dolore odio
+                      distinctio quas beatae! Reiciendis incidunt quisquam
+                      magnam quaerat cupiditate veniam, inventore accusamus
+                      eveniet.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  &#8592;
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  &#8594;
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="image_container">
+            <img src="${require(`./img/banner-1.jpg`).default}" alt="Banner" />
           </div>
         </div>
       </section>
       <section class="work-sample_section">
         <div class="container">
           <div class="text_content">
-            <h3 class="header">Featured Works.</h3>
-            <span class="text"
+            <h3 class="heading_big">Featured Works.</h3>
+            <span
               >Huge collection of elements, rich customization options, flexible
-              layouts, stunning pages and instant results!</span
-            >
+              <br />
+              layouts, stunning pages and instant results!
+            </span>
           </div>
-          <div class="image_content">
-            <div class="row">
-              <div class="col">
-                <div class="image_container"></div>
-                <span>Mobile Apps</span>
+          <div class="galarry">
+            <div class="galarry_item">
+              <div class="image_container">
+                <img
+                  src="${require(`./img/portfolio/pf-1.jpg`).default}"
+                  alt="Banner"
+                />
+                <div class="icons">
+                  <img
+                    src="${require(`./img/icon/search-solid.svg`).default}"
+                    alt=""
+                  />
+                  <img
+                    src="${require(`./img/icon/link-solid.svg`).default}"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div class="col">
-                <div class="image_container"></div>
-                <span>Mobile Apps</span>
-              </div>
-              <div class="col">
-                <div class="image_container"></div>
-                <span>Mobile Apps</span>
-              </div>
+              <span>Mobile Apps</span>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="image_container"></div>
-                <span>Mobile Apps</span>
+            <div class="galarry_item">
+              <div class="image_container">
+                <img
+                  src="${require(`./img/portfolio/pf-2.jpg`).default}"
+                  alt="Banner"
+                />
+                <div class="icons">
+                  <img
+                    src="${require(`./img/icon/search-solid.svg`).default}"
+                    alt=""
+                  />
+                  <img
+                    src="${require(`./img/icon/link-solid.svg`).default}"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div class="col">
-                <div class="image_container"></div>
-                <span>Mobile Apps</span>
+              <span>Mobile Apps</span>
+            </div>
+            <div class="galarry_item">
+              <div class="image_container">
+                <img
+                  src="${require(`./img/portfolio/pf-3.jpg`).default}"
+                  alt="Banner"
+                />
+                <div class="icons">
+                  <img
+                    src="${require(`./img/icon/search-solid.svg`).default}"
+                    alt=""
+                  />
+                  <img
+                    src="${require(`./img/icon/link-solid.svg`).default}"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div class="col">
-                <div class="image_container"></div>
-                <span>Mobile Apps</span>
+              <span>Mobile Apps</span>
+            </div>
+            <div class="galarry_item">
+              <div class="image_container">
+                <img
+                  src="${require(`./img/portfolio/pf-4.jpg`).default}"
+                  alt="Banner"
+                />
+                <div class="icons">
+                  <img
+                    src="${require(`./img/icon/search-solid.svg`).default}"
+                    alt=""
+                  />
+                  <img
+                    src="${require(`./img/icon/link-solid.svg`).default}"
+                    alt=""
+                  />
+                </div>
               </div>
+              <span>Mobile Apps</span>
+            </div>
+            <div class="galarry_item">
+              <div class="image_container">
+                <img
+                  src="${require(`./img/portfolio/pf-5.jpg`).default}"
+                  alt="Banner"
+                />
+                <div class="icons">
+                  <img
+                    src="${require(`./img/icon/search-solid.svg`).default}"
+                    alt=""
+                  />
+                  <img
+                    src="${require(`./img/icon/link-solid.svg`).default}"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span>Mobile Apps</span>
+            </div>
+            <div class="galarry_item">
+              <div class="image_container">
+                <img
+                  src="${require(`./img/portfolio/pf-6.jpg`).default}"
+                  alt="Banner"
+                />
+                <div class="icons">
+                  <img
+                    src="${require(`./img/icon/search-solid.svg`).default}"
+                    alt=""
+                  />
+                  <img
+                    src="${require(`./img/icon/link-solid.svg`).default}"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span>Mobile Apps</span>
             </div>
           </div>
         </div>
@@ -137,23 +454,42 @@
       <section class="discover_template">
         <div class="container">
           <div class="row">
-            <div class="col"></div>
-            <div class="col">
-              <h2 class="display-3">Huge template collection.</h2>
-              <p>
-                Ave Collection makes your life easier. You can even save and
-                re-use custom templates.
-              </p>
-              <div class="buttons"></div>
+            <div class="container_image col-12 col-sm-6">
+              <img src="${require(`./img/carousel-item-28.jpg`).default}">
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="container_content">
+                <div class="wraper">
+                  <h2 class="display-3">
+                    Huge Template Collection
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. 
+                    Maiores rerum quam at distinctio et 
+                  </p>
+                  <div class="buttons">
+                    <button class="btn btn-gradient btn-lg">Discover AVE</button>
+                    <button class="btn btn-dark btn-lg">Discover AVE</button>
+                  </div>
+                </div>
+                
+              </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
       <section class="advantage_section">
         <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="logo"></div>
+          <div class="section_items">
+            <div class="item">
+              <div class="logo">
+                <img
+                  src="${require(`./img/fluid_svg/web_tab.svg`).default}"
+                  alt=""
+                />
+              </div>
               <div class="content">
                 <h4>SEO Optimized</h4>
                 <p>
@@ -165,8 +501,14 @@
                 </button>
               </div>
             </div>
-            <div class="col">
-              <div class="logo"></div>
+
+            <div class="item">
+              <div class="logo">
+                <img
+                  src="${require(`./img/fluid_svg/web_tab.svg`).default}"
+                  alt=""
+                />
+              </div>
               <div class="content">
                 <h4>SEO Optimized</h4>
                 <p>
@@ -178,8 +520,14 @@
                 </button>
               </div>
             </div>
-            <div class="col">
-              <div class="logo"></div>
+
+            <div class="item">
+              <div class="logo">
+                <img
+                  src="${require(`./img/fluid_svg/chat_icon.svg`).default}"
+                  alt=""
+                />
+              </div>
               <div class="content">
                 <h4>SEO Optimized</h4>
                 <p>
@@ -191,10 +539,14 @@
                 </button>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="logo"></div>
+
+            <div class="item">
+              <div class="logo">
+                <img
+                  src="${require(`./img/fluid_svg/shoping_bag.svg`).default}"
+                  alt=""
+                />
+              </div>
               <div class="content">
                 <h4>SEO Optimized</h4>
                 <p>
@@ -206,8 +558,14 @@
                 </button>
               </div>
             </div>
-            <div class="col">
-              <div class="logo"></div>
+
+            <div class="item">
+              <div class="logo">
+                <img
+                  src="${require(`./img/fluid_svg/web_tab.svg`).default}"
+                  alt=""
+                />
+              </div>
               <div class="content">
                 <h4>SEO Optimized</h4>
                 <p>
@@ -219,10 +577,16 @@
                 </button>
               </div>
             </div>
-            <div class="col">
-              <div class="logo"></div>
+
+            <div class="item">
+              <div class="logo">
+                <img
+                  src="${require(`./img/fluid_svg/rense_and_deriver.svg`).default}"
+                  alt=""
+                />
+              </div>
               <div class="content">
-                <h4>SEO Optimized</h4>
+                <h4>Automatic Update</h4>
                 <p>
                   Help our clients succeed by creating brand identities, digital
                   experiences, and print materials.
@@ -238,97 +602,241 @@
       <section class="team_section">
         <div class="container">
           <div class="content">
-            <h2>Special Team.</h2>
+            <h2 class="heading_big">Special Team.</h2>
             <p>
               Huge collection of elements, rich customization options, flexible
+              <br />
               layouts, stunning pages and instant results!
             </p>
           </div>
           <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col-12 col-md-4 item">
+              <div class="col_container">
+                <img src="${require(`./img/team-1.jpg`).default}" alt="" />
+                <div class="item_content">
+                  <h4 class="name">
+                    Ederson <br />
+                    <span>Title</span>
+                  </h4>
+                  <div class="icons">
+                    <ul>
+                      <li>
+                        <a href="#"><i class="icon-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-telegram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-twitter"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 item">
+              <div class="col_container">
+                <img src="${require(`./img/team-2.jpg`).default}" alt="" />
+                <div class="item_content">
+                  <h4 class="name">
+                    Ederson <br />
+                    <span>Title</span>
+                  </h4>
+                  <div class="icons">
+                    <ul>
+                      <li>
+                        <a href="#"><i class="icon-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-telegram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-twitter"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 item">
+              <div class="col_container">
+                <img src="${require(`./img/team-3.jpg`).default}" alt="" />
+                <div class="item_content">
+                  <h4 class="name">
+                    Ederson <br />
+                    <span>Title</span>
+                  </h4>
+                  <div class="icons">
+                    <ul>
+                      <li>
+                        <a href="#"><i class="icon-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-telegram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="icon-twitter"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="testimonial">
-        <div class="container">
-          <div class="row">
-            <div class="col"></div>
+        <div class="container-fluid">
+          <div class="glide_conteiner_two">
+            <h4>Real Stories</h4>
+            <div class="glider_wraper">
+              <div class="glide_two">
+                <div class="glide__track" data-glide-el="track">
+                  <div class="glide__slides">
+                    <div class="glide__slide">
+                      <p class="story"><span>"</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum officiis reiciendis asperiores eligendi vero!
+                        Exercitationem <span>"</span>
+                      </p>
+                      <div class="user">
+                        <img src="${require(`./img/testimonial/testi-1.jpg`).default}" alt="" />
+                        <h4>Alex Doe</h4>
+                        <span>User One</span>
+                      </div>
+                    </div>
+                    <div class="glide__slide">
+                      <p class="story"><span>"</span>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum officiis reiciendis asperiores eligendi vero!
+                        Exercitationem <span>"</span>
+                      </p>
+                      <div class="user">
+                        <img src="${require(`./img/testimonial/testi-2.png`).default}" alt="" />
+                        <h4>Alex Doe</h4>
+                        <span>User One</span>
+                      </div>
+                    </div>
+                    <div class="glide__slide">
+                      <p class="story"><span>"</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum officiis reiciendis asperiores eligendi vero!
+                        Exercitationem <span>"</span>
+                      </p>
+                      <div class="user">
+                        <img src="${require(`./img/testimonial/testi-3.png`).default}" alt="" />
+                        <h4>Alex Doe</h4>
+                        <span>User One</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#10092;</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#10093;</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <h4 class="display-4">777</h4>
-              <span>Happy Clients </span>
-            </div>
-            <div class="col">
-              <h4 class="display-4">777</h4>
-              <span>Happy Clients </span>
-            </div>
-            <div class="col">
-              <h4 class="display-4">777</h4>
-              <span>Happy Clients </span>
-            </div>
-            <div class="col">
-              <h4 class="display-4">777</h4>
-              <span>Happy Clients </span>
+
+          <div class="container">
+            <div class="row statics">
+              <div class="statics_item col-12 col-sm-6 col-md-3">
+                <h4 id="count_1" class="display-4">777</h4>
+                <span>Happy Clients </span>
+              </div>
+              <div class="statics_item col-12 col-sm-6 col-md-3">
+                <h4 id="count_2" class="display-4">777</h4>
+                <span>Happy Clients </span>
+              </div>
+              <div class="statics_item col-12 col-sm-6 col-md-3">
+                <h4 id="count_3" class="display-4">777</h4>
+                <span>Happy Clients </span>
+              </div>
+              <div class="statics_item col-12 col-sm-6 col-md-3">
+                <h4 id="count_4" class="display-4">777</h4>
+                <span>Happy Clients </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="post">
         <div class="container">
-          <h2></h2>
+          <h2 class="heading_big">Latest Posts</h2>
           <div class="row">
-            <div class="col">
+            <div class="col-no-padding col-12 col-sm-4">
               <div class="content">
                 <h4>Anything is possible in this world!</h4>
                 <p>
                   “Success is the result of perfection, hard work, learning from
                   failure, loyalty, and persistence” Colin Powell Let me
                 </p>
-              </div>
+                <div class="author d-flex flex-row">
+                  <div class="image_container">
+                    <img src="${require(`./img/testimonial/testi-2.png`).default}" alt="">
+                  </div>
+                    <div class="details">
+                      <p class="date">20th December,1991</p>
+                      <p class="name">Kelly</p>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="col">
+            <div class="col-no-padding col-12 col-sm-4">
               <div class="content">
                 <h4>Anything is possible in this world!</h4>
                 <p>
                   “Success is the result of perfection, hard work, learning from
                   failure, loyalty, and persistence” Colin Powell Let me
                 </p>
-              </div>
+                <div class="author d-flex flex-row">
+                  <div class="image_container">
+                    <img src="${require(`./img/testimonial/testi-2.png`).default}" alt="">
+                  </div>
+                    <div class="details">
+                      <p class="date">20th December,1991</p>
+                      <p class="name">Kelly</p>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <div class="col">
+            <div class="col-no-padding col-12 col-sm-4">
               <div class="content">
                 <h4>Anything is possible in this world!</h4>
                 <p>
                   “Success is the result of perfection, hard work, learning from
                   failure, loyalty, and persistence” Colin Powell Let me
                 </p>
+                <div class="author d-flex flex-row">
+                  <div class="image_container">
+                    <img src="${require(`./img/testimonial/testi-2.png`).default}" alt="">
+                  </div>
+                    <div class="details">
+                      <p class="date">20th December,1991</p>
+                      <p class="name">Kelly</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="advertise"></section>
+      <section class="advertise">
+        <div class="container">
+          <h3 class="advertise_heading">
+            Make Your Website Unforgetable <br>
+           <span> Join the AVE comunity</span>
+          </h3>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-      </div>
-      <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
+      <div class="follow_me">
+        <h1 class="rellax" data-rellax-speed="-4">Follow Me</h1>
       </div>
     </footer>
-
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
