@@ -1,0 +1,24 @@
+.container{
+    height: 40vh;
+    background-color: #fff;
+}
+
+
+.col{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+}
+.myClass:nth-child(odd){
+    background-color: blueviolet;
+}
+.myClass:nth-child(even){
+    background-color: rgb(195, 43, 226);
+}
+
+/* div:nth-child(odd){
+    background-color: blueviolet;
+} */
+.col-sm:nth-child(even){
+    background-color: rgb(195, 43, 226);
+}

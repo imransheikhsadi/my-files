@@ -1,13 +1,17 @@
-///test perpose
-.text_container{
-    font-size: 2rem;
-    margin: 3rem;
+// .rotate{
+//     width: max-content;
+//     height: max-content;
+//     min-width: 60px;
+//     min-height: 30px;
+//     display: inline-block;
+//     background-color: rebeccapurple;
+//     color: rgb(70, 10, 10);
+//     position: relative;
+//     margin: 300px;
 
-    
-}
-
-.text{
-    transform: perspective(300px) rotateY(-60deg);
-    transform-origin: 0 50%;
-
-}
+//     span{
+//         position: absolute;
+//         top: 30px;
+//         width: max-content;
+//     }
+// }

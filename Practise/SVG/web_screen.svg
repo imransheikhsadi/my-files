@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2.846" y="13.353" width="52.024" height="37.295" style="fill: none; stroke: rgb(0, 0, 0); pointer-events: none;"/>
+  <polyline style="stroke: rgb(0, 0, 0); fill: none;" points="7.816 11.379 7.816 8.124 59.842 8.124 59.842 45.749 56.578 45.749"/>
+  <line style="stroke: rgb(0, 0, 0);" x1="2.817235561483356" y1="18.015897772567047" x2="54.930178623750635" y2="18.015897772567047"/>
+  <rect x="5.763" y="14.793" width="2.486" height="1.105" style="fill: rgb(147, 147, 147);"/>
+  <rect x="9.768" y="14.793" width="2.486" height="1.105" style="fill: rgb(147, 147, 147);"/>
+  <rect x="14.004" y="14.793" width="2.486" height="1.105" style="fill: rgb(147, 147, 147);"/>
+</svg>

@@ -1,0 +1,17 @@
+.glider_container{
+    width: 40%;
+    height: 400px;
+}
+.glide__slide{
+    background-color: blueviolet;
+    height: 100%;
+}
+.hello{
+    width: 60%;
+    background-color: blueviolet;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+}

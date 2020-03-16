@@ -1,0 +1,83 @@
+.animate_container {
+  /* width: 100%; */
+    /* margin: 0 auto; */
+    /* height: 100px; */
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  background-color: blueviolet;
+}
+.btn {
+  /* text-align: center; */
+  margin-top: 60px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+/*animation starts here*/
+.animate {
+  display: block;
+  animation: myAnimation_out linear 600ms;
+  position: absolute;
+}
+
+
+@keyframes myAnimation_in {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 40%;
+
+  }
+  5%{
+    top: 10px;
+  }
+  47%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+    top: 20px;
+    transform: perspective(300px) rotateX(-90deg);
+  }
+  55%{
+    transform: perspective(300px) rotateX(-45deg);
+    opacity: 1;
+  }
+  100%{
+    transform: perspective(300px) rotateX(0deg);
+    transform-origin: 50% 40%;
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes myAnimation_out {
+  0%{
+    top: 0;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+  }
+  40%{
+    transform: perspective(600px) rotateX(40deg);
+    opacity: .5;
+  }
+  50%{
+    top: -25px;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transform: perspective(600px) rotateX(90deg);
+  }
+  100%{
+    top: -15px;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transform: perspective(600px) rotateX(90deg);
+  }
+}

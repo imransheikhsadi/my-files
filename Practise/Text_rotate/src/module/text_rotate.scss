@@ -1,5 +1,12 @@
 .elastic_rotate-container {
   position: relative;
+  // width: 100px;
+  // height: 100px;
+  // height: 100px;
+  // display: inline-block;
+  font-size: 30px;
+  background-color: rebeccapurple;
+  margin: 300px;
 
   & span:not(:first-child) {
     visibility: hidden;
@@ -7,6 +14,7 @@
 
   span {
     position: absolute;
+    width: max-content;
     font-size: inherit;
   }
 }
@@ -145,7 +153,6 @@
   0% {
     opacity: 0;
     transform-origin: 50% 40%;
-
   }
   5%{
     top: 10px;
@@ -155,7 +162,7 @@
   }
   50%{
     opacity: .5;
-    top: 20px;
+    top: 25px;
     transform: perspective(300px) rotateX(-90deg);
   }
   55%{
@@ -170,36 +177,32 @@
   }
 }
 
-
 @keyframes u-f-two_out {
-  0% {
+  0%{
     visibility: visible;
+    top: 0;
+    transform-origin: 50% 50%;
     opacity: 1;
-    bottom: 0;
-  }
-
-  30% {
-    // opacity: 1;
     transform: perspective(600px) rotateX(0deg);
   }
-
-  40% {
-    // bottom: 5px;
-    opacity: 0.8;
+  40%{
+    transform: perspective(600px) rotateX(40deg);
+    opacity: .5;
   }
-
-  50% {
-    // bottom: 10px;
+  45%{
+    transform: perspective(600px) rotateX(90deg);
+  }
+  50%{
+    top: -25px;
+    transform-origin: 50% 50%;
     opacity: 0;
     transform: perspective(600px) rotateX(90deg);
   }
-  55% {
-    bottom: 15px;
+  100%{
+    top: -15px;
+    transform-origin: 50% 50%;
     opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
+    transform: perspective(600px) rotateX(90deg);
   }
 }
 

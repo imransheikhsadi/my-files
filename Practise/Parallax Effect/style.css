@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 100%;
+    font-size: 16px;
+}
+.s_1{
+    background-color: royalblue;
+    height: 100vh;
+}
+.s_2{
+    background-color: salmon;
+    height: 50vh;
+    position: absolute;
+    z-index: 50;
+    /* top: 50%; */
+}
+
+/* body{
+    height: 100%;
+    overflow-y: scroll;
+} */
