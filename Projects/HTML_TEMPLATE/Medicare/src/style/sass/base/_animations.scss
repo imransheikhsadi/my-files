@@ -1,0 +1,23 @@
+#line{
+    stroke: orangered;
+    stroke-width: 15;
+    stroke-dasharray: 1580.32;
+    stroke-dashoffset: 1580.32;
+    animation: animate 15s linear infinite;
+    animation-fill-mode: forwards;
+    // animation-direction: ;
+}
+
+svg{
+    width: 60px;
+}
+
+@keyframes animate {
+    0%{
+        stroke-dashoffset: 1580.32;
+    }
+ 
+    100%{
+        stroke-dashoffset: -1580.32;
+    }
+}
