@@ -2,12 +2,25 @@ import '../style/sass/main.scss';
 import Rotate from '../vendors/js/text_rotate';
 import Glide from '@glidejs/glide';
 import AOS from 'aos';
-import 'aos/dist/aos.scss';
+import OnScreen from '../vendors/js/on_screen';
+import '../vendors/css/aos.scss';
 
 let glide = new Glide('.glide',{type: 'carousel'}).mount();
 let glide_two = new Glide('.glide_two',{type: 'carousel'}).mount();
 let rotate = new Rotate('hero_text_animation','UP_FADE_TWO',6000);
+let onscreen = new OnScreen([{
+  element: '.space_maker',
+  callback: {
+    in: ()=>{
+      document.querySelector('.footer').style.display = 'block'
+    },
+    out: ()=>{
+      document.querySelector('.footer').style.display = 'none'
+    }
+  }
+}])
 AOS.init();
+
 
 
 function counter(id, start, end, duration) {
