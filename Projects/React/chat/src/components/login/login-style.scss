@@ -1,0 +1,57 @@
+.login{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(241, 241, 241);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    // color: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgb(189, 189, 189);
+
+    h2{
+        font-size: 30px;
+    }
+
+    .user-icon{
+        // margin-top: 10px;
+        span{
+            font-size: 150px;
+            color: rgb(255, 98, 98);
+        }
+    }
+    
+    
+
+    .content-wraper{
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        input,button{
+            height: 40px;
+            border-radius: 5px;
+            font-family: 'Baloo Bhaina 2', cursive;
+            font-size: 15px;
+
+        }
+        input{
+            margin-bottom: 10px;
+            padding-left: 30px;
+        }
+        button{
+            background-color: rgb(245, 206, 155);
+            transition: all 300ms;
+            &:hover{
+                background-color: rgb(255, 98, 98);
+            }
+        }
+
+
+    }
+}
