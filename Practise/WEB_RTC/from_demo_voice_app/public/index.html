@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <title>Web Rtc Practise</title>
+</head>
+<body>
+    <div class="connection">
+        <input class="name" type="text" placeholder="Name">
+        <button class="connect">LogIn</button>
+    </div>
+    <div class="section-audio">
+        Local audio: <audio id = "localAudio" controls autoplay></audio> 
+        Remote audio: <audio id = "remoteAudio" controls autoplay></audio> 
+    </div>
+    <div class="section-calling">
+        <input type="text" class="remote_reciver" placeholder="Name You Want To Call ">
+        <button class="callBtn">Call</button>
+    </div>
+
+    <div class="users">
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
