@@ -1,0 +1,48 @@
+.users__panel{
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid orangered;
+    max-height: 95vh;
+    overflow: auto;
+   
+
+
+    .panel__container{
+
+
+        header{
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background-color: orangered;
+            box-sizing: border-box;
+        }
+
+        .users{
+
+
+            .single--user{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 40px;
+
+                &:not(:last-child){
+                    border-bottom: 1px dashed gray;
+                }
+
+                .user--name{}
+                span{}
+                .user__icon{
+                    color: orchid;
+                }
+            }
+        }
+    }
+}
+
+.container{
+    margin: auto;
+    box-sizing: border-box;
+
+}
