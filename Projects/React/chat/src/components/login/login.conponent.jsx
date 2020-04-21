@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './login-style.scss';
+import { socket } from '../../App';
 
-function Login() {
+function Login({setMe}) {
+    const [userName,setUserName] = useState('');
+
+    function handleChange(event) {
+        setUserName(event.target.value);
+    }
+    function handleSubmit() {
+       socket.emit('addUser',{name: userName});
+       setMe(userName);
+    }
+
     return (
         <div className="login">
             <h2>Login</h2>
             <div className="user-icon">
-                <span class="material-icons"> person </span>
+                <span className="material-icons"> person </span>
             </div>
             <div className="content-wraper">
-                <input placeholder="Your Name" type="text" />
-                <button>Submit</button>
+                <input onChange={handleChange} placeholder="Your Name" type="text" />
+                <button onClick={handleSubmit} >Submit</button>
             </div>
         </div>
     )
