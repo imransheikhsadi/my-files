@@ -14,7 +14,7 @@ let pc;
 let me;
 
 
-let socket = io.connect('https://4e934706.ngrok.io');
+let socket = io.connect('https://64bdc5af.ngrok.io/');
 
 
 socket.on('connect', () => {

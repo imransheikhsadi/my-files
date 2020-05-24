@@ -1,8 +1,8 @@
-const io = require('socket.io')(4000);
+const io = require('socket.io')(3001);
 console.log('Signaling Server started on port 3002');
 
-const users = {}
-const userList = []
+let users = {}
+let userList = []
 
 io.on('connection',(socket)=>{
     console.log('New User Connected');
@@ -16,7 +16,7 @@ io.on('connection',(socket)=>{
             users[name] = socket; 
             socket.name = name;
             socket.emit('addUser',{success: true});
-            userList.push({name,id: socket.id})
+            updateUserList();
             io.emit('userlist',{userList});
         }
     });
@@ -26,7 +26,7 @@ io.on('connection',(socket)=>{
     // On answer
     socket.on('answer',(data)=>{
         console.log('Sending answer to'+data.name);
-        console.log(data);
+        socket.otherName = data.name;
         
         let conn = users[data.name];
 
@@ -59,12 +59,49 @@ io.on('connection',(socket)=>{
      // ON Offer
      socket.on('offer',(data)=>{
         console.log('Sending offer to'+data.name);
+        socket.otherName = data.name;
         let conn = users[data.name];
-
         if (conn != null) {
             conn.emit('offer',{name: socket.name, offer: data.offer})
         }
     });
 
+    // on Audio Request
+    socket.on('audio',({name})=>{
+        let conn = users[name];
 
+        if (conn != null) {
+            conn.emit('audio',{name: 'audioOffer'});
+        }
+    })
+
+    socket.on('disconnect',(data)=>{
+        if (socket.name) {
+           if (socket.otherName) {
+               console.log(socket.otherName);
+               console.log(socket.name);
+               
+               
+            let conn = users[socket.otherName];
+            if (conn != null) {
+                conn.emit('clientDisconnect',{name: socket.name});
+            }
+           }
+
+           delete users[socket.name];
+            updateUserList();
+            io.emit('userlist',{userList});
+        }
+    })
+
+    const updateUserList = ()=>{
+        let names = Object.keys(users);
+        let list = []
+        names.forEach(name=>{
+            list.push({name: name, id: users[name].id})
+        });
+
+        userList = list;
+        
+    }
 });

@@ -60,6 +60,8 @@
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
+
 
                 span{
                     background-color: rgba(141, 141, 141, 0.116);
@@ -129,4 +131,8 @@
             cursor: pointer;
         }
     }
+}
+
+.blur{
+    filter: blur(8px);
 }

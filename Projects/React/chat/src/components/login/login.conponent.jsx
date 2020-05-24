@@ -8,9 +8,12 @@ function Login({setMe}) {
     function handleChange(event) {
         setUserName(event.target.value);
     }
-    function handleSubmit() {
-       socket.emit('addUser',{name: userName});
-       setMe(userName);
+    function handleSubmit(event) {
+       if (event.keyCode === 13 || event.keyCode === undefined) {
+            socket.emit('addUser',{name: userName});
+            setMe(userName);
+       }
+       
     }
 
     return (
@@ -20,7 +23,7 @@ function Login({setMe}) {
                 <span className="material-icons"> person </span>
             </div>
             <div className="content-wraper">
-                <input onChange={handleChange} placeholder="Your Name" type="text" />
+                <input onChange={handleChange} onKeyDown={handleSubmit} placeholder="Your Name" type="text" />
                 <button onClick={handleSubmit} >Submit</button>
             </div>
         </div>

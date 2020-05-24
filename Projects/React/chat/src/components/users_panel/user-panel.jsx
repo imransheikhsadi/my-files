@@ -2,16 +2,25 @@ import React, { useState, useEffect } from 'react';
 import './user-panel-style.scss';
 import { socket } from '../../App';
 
-function UsersPanel({me,connectToUser}) {
+function UsersPanel({ me, connectToUser }) {
 
-    const [userList,setUserList] = useState([]);
+    const [userList, setUserList] = useState([]);
 
-    useEffect(()=>{
-        socket.on('userlist',(data)=>{
-            let fltData = data.userList.filter((item)=> item.name !== me);
+    useEffect(() => {
+        socket.on('userlist', getUserList);
+        
+        
+        function getUserList({ userList }) {
+            let fltData = userList.filter(({name}) => name !== me);
             setUserList(fltData);
-        });
-    },[me]);
+        }
+
+        return ()=>{
+            socket.off('userlist',getUserList);
+        }
+    }, [me]);
+
+   
 
     return (
         <div className="wraper">
@@ -19,9 +28,9 @@ function UsersPanel({me,connectToUser}) {
                 <div className="panel__container">
                     <header> Active Users</header>
                     <div className="users">
-                        { userList.length > 0 ? userList.map(({name,id})=>{
-                            return(
-                                <div key={id} className="single--user" onClick={(event)=>{connectToUser(name,id)}}>
+                        {userList.length > 0 ? userList.map(({ name, id }) => {
+                            return (
+                                <div key={id} className="single--user" onClick={(event) => { connectToUser(name, id) }}>
                                     <span className="material-icons user__icon"> face </span>
                                     <h4 className="user--name">{name}</h4>
                                     <span className="material-icons phone_chat"> perm_phone_msg </span>
@@ -30,7 +39,7 @@ function UsersPanel({me,connectToUser}) {
                         }) : <h1> No User Found</h1>}
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     )
 }

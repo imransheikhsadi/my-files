@@ -5,7 +5,7 @@ import io from 'socket.io-client';
 
 
 
-const socket = io.connect('192.168.0.111:3001');
+const socket = io.connect('https://10c3593a.ngrok.io');
 
 function App() {
   return (

@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import './chat-box-style.scss';
 
-function ChatBox({ dataChannel, connectedUser }) {
-
+function ChatBox({ dataChannel, connectedUser, initVoice , voice}) {
+    const [messageList,setMessageList] = useState([]);
     const [message,setMessage]  = useState('');
 
     useEffect(()=>{
         if (dataChannel) {
-            dataChannel.onmessage = handleMessage
+            dataChannel.onmessage = (event) => {
+                setMessageList([...messageList,{message: event.data, id: event.timeStamp, me: false}]);   
+            }
         }
-    },[dataChannel])
+    },[dataChannel,messageList])
 
-    function handleMessage(event) {
-        console.log(event);
-    }
+   
 
     function sendMessage(event) {
-        dataChannel.send(message);
+        if (dataChannel.readyState) {
+            dataChannel.send(message);
+            setMessageList([...messageList,{message: message, id: event.timeStamp, me: true}]);
+            setMessage('');
+        }
     }
 
     function textHandler(event) {
@@ -26,38 +30,33 @@ function ChatBox({ dataChannel, connectedUser }) {
 
         setMessage(element.value);  
     }
+
+    function handleVoice(event) {
+        initVoice(true);
+    }
+
     return (
-        <div className="chat__box">
+        <div className={`chat__box ${voice && "blur"}`}>
             <div className="header">
                 <h4 className="user__title">{connectedUser}</h4>
                 <div className="icon__container">
-                    <span className="material-icons"> call </span>
+                    <span className="material-icons" onClick={handleVoice}> call </span>
                     <span className="material-icons"> video_call </span>
                     <span className="material-icons"> tune </span>
                 </div>
             </div>
             <div className="chat__container">
                 <div className="massage__container">
-                    <div className="massage massage-remote">
-                        <span>
-                            Lorem ipsum dolor
-                            sit amet consectetur adipisicing elit. Asperiores, voluptate
-                            corporis sunt possimus a fugiat obcaecati non perferendis magni
-                            quos in quod voluptatem,
-                            accusantium ipsam alias? Cumque commodi vel suscipit!
-                        </span>
-                    </div>
-                    <div className="massage massage-local">
-                        <span>
-                            Lorem ipsum dolor
-                            sit amet consectetur adipisicing elit. Asperiores, voluptate
-                            corporis sunt possimus a fugiat obcaecati non perferendis magni
-                            quos in quod voluptatem,
-                            accusantium ipsam alias? Cumque commodi vel suscipit!
-                        </span>
-                    </div>
+                    {
+                        messageList.map(({message,id,me})=>(
+                            <div key={id} className={`message ${me ? "massage-local" : "massage-remote"}`}>
+                                <span>{message}</span>
+                                {console.log(message,id,me)}
+                            </div>
+                        ))
+                    }
                 </div>
-                <textarea onChange={textHandler} placeholder="write your massage" ></textarea>
+                <textarea onChange={textHandler} value={message} placeholder="write your massage" ></textarea>
             </div>
             <div className="footer">
                 <button onClick={sendMessage}>Send</button>
