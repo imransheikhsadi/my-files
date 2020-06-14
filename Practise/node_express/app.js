@@ -1,18 +1,26 @@
 const express = require('express');
 const tourRoutes = require('./routes/tour.routes');
+const userRoutes = require('./routes/user.routes');
+const globalErrorHandler = require('./controllers/error.controller');
+const AppError = require('./utils/app.error');
 
 
 const app = express();
 
 app.use(express.json());
-app.use((req,res,next)=>{
-    console.log('This is a request response MiddleWere');
-    next();
-});
 
 
 // Routes
 app.use('/api/v1/tours',tourRoutes);
+app.use('/api/v1/users',userRoutes);
+
+app.all('*',(req,res,next)=>{
+    next(new AppError(`Can't find ${req.originalUrl} on this server!`,404));
+});
+
+app.use(globalErrorHandler);
+
+
 
 
 
